@@ -22,35 +22,70 @@ export default function Home() {
   };
   return (
     <>
-      <h1>Weather APP</h1>
-      <input
-        type="text"
-        placeholder="Type your City"
-        onChange={(e) => setCity(e.target.value)}
-      />
-      
-<form className="max-w-md mx-auto">   
-    <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-    <div className="relative">
-        <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-            <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-            </svg>
+    <div className="min-h-screen bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 flex flex-col items-center justify-center px-4">
+      <h1 className="text-4xl md:text-5xl font-extrabold text-white drop-shadow-lg mb-8 animate-bounce">
+        🌤️ Weather App
+      </h1>
+  
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          searchWeather(e);
+        }}
+        className="w-full max-w-lg"
+      >
+        <div className="relative">
+          <input
+            type="search"
+            id="default-search"
+            onChange={(e) => setCity(e.target.value)}
+            className="block w-full p-4 ps-12 text-lg text-gray-900 border border-gray-300 rounded-2xl shadow-lg outline-none bg-white/80 focus:ring-4 focus:ring-yellow-400 focus:border-yellow-400 placeholder-gray-500 transition-all duration-500"
+            placeholder="🔎 Search your City..."
+            required
+          />
+          <button
+            type="submit"
+            className="absolute end-2.5 bottom-2.5 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-xl text-sm px-5 py-2 shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+          >
+            Search
+          </button>
         </div>
-        <input type="search" id="default-search" onChange={(e) => setCity(e.target.value)} className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search your City" required />
-        <button type="submit" onClick={searchWeather} className="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+      </form>
+  
+      {/* Weather Card */}
+      {Weather && (
+        <div className="mt-10 w-full max-w-md bg-white/90 rounded-3xl shadow-2xl p-6 text-center transform transition-all duration-700 hover:scale-105 hover:shadow-purple-800/50">
+          <h2 className="text-2xl font-bold text-gray-800 mb-3">
+            {City.toUpperCase()}
+          </h2>
+          <div className="flex justify-center">
+            <img
+              src={`https:${Weather?.condition?.icon}`}
+              alt="Weather Icon"
+              className="h-24 w-24 drop-shadow-lg animate-pulse"
+            />
+          </div>
+          <p className="text-4xl font-extrabold text-purple-700 mt-4">
+            {Weather?.temp_c}°C
+          </p>
+          <p className="text-lg text-gray-700 mt-2 capitalize">
+            {Weather?.condition?.text}
+          </p>
+  
+          <div className="flex justify-around mt-6">
+            <div className="bg-purple-100 rounded-xl px-4 py-2 shadow">
+              <p className="text-sm text-gray-600">💨 Wind</p>
+              <p className="text-lg font-bold">{Weather?.wind_kph} km/h</p>
+            </div>
+            <div className="bg-blue-100 rounded-xl px-4 py-2 shadow">
+              <p className="text-sm text-gray-600">🌡️ Feels</p>
+              <p className="text-lg font-bold">{Weather?.feelslike_c}°C</p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
-</form>
-
-      <p>{City}</p>
-      <p> {Weather?.temp_c}</p>
-      <p>wind : {Weather?.wind_kph}</p>
-      <img
-        src={`https:${Weather?.condition?.icon}`}
-        alt="Weather Icon"
-        className="font-medium shadow-xl shadow-black h-20  rounded-4xl"
-      />
-      <p>type : {Weather?.condition?.text}</p>
-    </>
+  </>
+  
   );
 }
