@@ -1,11 +1,28 @@
+import Link from 'next/link'
 import React from 'react'
-import WeatherApp from './weather/page'
+import Card from './components/card'
+import { cardsData } from './data/card'
 
 function Home() {
+
+
   return (
-    <div>
-      <WeatherApp />
+    <>
+    
+    <div className="flex flex-col items-center">
+      {cardsData.map((card, index) => (
+        <Card
+          key={index}
+          nextroute={card.nextroute}
+          alternate={card.alternate}
+          imageSrc={card.imageSrc}
+          divText={card.divText}
+          btnName={card.btnName}
+        />
+      ))}
     </div>
+   
+    </>
   )
 }
 
