@@ -18,6 +18,7 @@ function Home() {
           imageSrc={card.imageSrc}
           divText={card.divText}
           btnName={card.btnName}
+          cardName={card.cardName}
         />
       ))}
     </div>

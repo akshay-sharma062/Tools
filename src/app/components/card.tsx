@@ -8,7 +8,8 @@ type CardProps = {
     alternate:string,
     imageSrc:string,
     divText:string,
-    btnName :string
+    btnName :string,
+    cardName:string
 }
 
 export default function Card({
@@ -16,7 +17,8 @@ export default function Card({
     alternate,
     imageSrc,
     divText,
-    btnName
+    btnName,
+    cardName
 }:CardProps) {
 
 
@@ -39,7 +41,7 @@ export default function Card({
         {/* Content */}
         <div className="flex flex-col justify-between p-4 sm:p-6 leading-normal w-full md:w-2/3 lg:w-1/2">
           <h5 className="mb-2 text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white transition-colors duration-300 group-hover:text-yellow-500">
-            🌤️ Modern Weather App
+            {cardName}
           </h5>
           <p className="mb-3 text-gray-700 dark:text-gray-400 text-base sm:text-lg">
            {divText}

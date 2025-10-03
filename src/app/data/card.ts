@@ -8,6 +8,7 @@ export const cardsData = [
       divText:
         "A beautifully designed weather app that shows real-time temperature, conditions, wind speed, and more. Search any city and get instant updates with a smooth, animated UI. Fully responsive and easy to use across devices.",
       btnName: "Explore Weather App",
+      cardName: "🌤️ Modern Weather App"
     },
     {
       nextroute: "/digital-clock",
@@ -17,6 +18,7 @@ export const cardsData = [
       divText:
         "A clean digital clock built with Next.js and Tailwind CSS. Shows live time and date with animations.",
       btnName: "View Clock",
+      cardName: "⌚ Digital Clock"
     },
   ];
   
