@@ -46,7 +46,7 @@ export default function Card({
           <p className="mb-3 text-gray-700 dark:text-gray-400 text-base sm:text-lg">
            {divText}
           </p>
-          <button className="mt-4 w-fit px-4 sm:px-5 py-2 text-sm sm:text-base font-semibold rounded-xl bg-yellow-400 text-gray-900 shadow-md hover:bg-yellow-500 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+          <button className="mt-4 cursor-pointer w-fit px-4 sm:px-5 py-2 text-sm sm:text-base font-semibold rounded-xl bg-yellow-400 text-gray-900 shadow-md hover:bg-transparent hover:text-amber-400 hover:border-amber-400 border-2 border-transparent hover:border-2 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
            { btnName}
           </button>
         </div>

@@ -24,7 +24,7 @@ export const cardsData = [
       nextroute: "/calcy",
       alternate: "Animated Calculator Preview",
       imageSrc:
-        "https://images.unsplash.com/photo-1625225230517-7426c1be750c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FsY3VsYXRvcnxlbnwwfHwwfHx8MA%3D%3D",
+        "https://images.unsplash.com/photo-1518133835878-5a93cc3f89e5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       divText:
         "An elegant, glass-themed calculator built with Next.js, Tailwind CSS, and Framer Motion. It features smooth hover effects, button animations, and responsive design. Perform basic arithmetic with style and interactivity.",
       btnName: "Try Calculator",
