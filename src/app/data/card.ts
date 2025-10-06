@@ -20,5 +20,16 @@ export const cardsData = [
       btnName: "View Clock",
       cardName: "⌚ Digital Clock"
     },
+    {
+      nextroute: "/calcy",
+      alternate: "Animated Calculator Preview",
+      imageSrc:
+        "https://images.unsplash.com/photo-1625225230517-7426c1be750c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FsY3VsYXRvcnxlbnwwfHwwfHx8MA%3D%3D",
+      divText:
+        "An elegant, glass-themed calculator built with Next.js, Tailwind CSS, and Framer Motion. It features smooth hover effects, button animations, and responsive design. Perform basic arithmetic with style and interactivity.",
+      btnName: "Try Calculator",
+      cardName: "🧮 Animated Calculator"
+    }
+    
   ];
   
