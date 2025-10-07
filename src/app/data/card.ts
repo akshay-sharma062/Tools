@@ -29,7 +29,15 @@ export const cardsData = [
         "An elegant, glass-themed calculator built with Next.js, Tailwind CSS, and Framer Motion. It features smooth hover effects, button animations, and responsive design. Perform basic arithmetic with style and interactivity.",
       btnName: "Try Calculator",
       cardName: "🧮 Animated Calculator"
-    }
+    },
+    {
+      nextroute: "/bmi-calcy",
+      alternate: "BMI Calculator Preview",
+      imageSrc: "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0",
+      divText: "A responsive and interactive BMI Calculator that calculates your Body Mass Index with animations, color-coded health categories, and smooth transitions. Includes input validation and BMI guide.",
+      btnName: "Try BMI Calculator",
+      cardName: "💪 Smart BMI Calculator"
+    },
     
   ];
   
